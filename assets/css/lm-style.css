@@ -33,6 +33,10 @@ body {
   transition: width 0.8s ease-in-out;
 }
 
+/*================================================
+              Reset/Normalize CSS
+=================================================== */
+
 .lm-main-wrapper {
   background: #f4efeb;
 }
