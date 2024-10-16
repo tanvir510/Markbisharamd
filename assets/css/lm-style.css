@@ -1,22 +1,22 @@
 /*Font*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Questrial&display=swap");
 /* 
-    font-family: "Montserrat", system-ui;
-    font-family: "Lato", sans-serif;
+    font-family: "Questrial", sans-serif;
+    font-family: "Open Sans", sans-serif;
 */
 
 /*Font End*/
 
 :root {
-  --lm-font: "Montserrat", system-ui;
-  --lm-font-alt: "Lato", sans-serif;
-  --lm-color-first: #045084;
+  --lm-font: "Questrial", sans-serif;
+  --lm-font-alt: "Open Sans", sans-serif;
+  --lm-color-first: #c5972d;
   --lm-color-second: #152b48;
   --lm-color-third: #b89868;
   --lm-color-light: #ffffff;
   --lm-color-lite-dark: #222222;
   --lm-color-dark: #000000;
-  --lm-color-neon: #dee400;
+  --lm-color-neon: #c5972d;
   --lm-color-gray: #ebf0f1;
 }
 
@@ -84,8 +84,8 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
-  line-height: normal;
+  font-size: 36px;
+  line-height: 40px;
   font-weight: 700;
   margin: 0;
   padding-bottom: 5px;
@@ -131,8 +131,8 @@ h6 {
 }
 
 .lm-sec-title {
-  font-size: 45px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 50px;
   color: var(--lm-color-dark);
   font-family: var(--lm-font);
   width: 100%;
@@ -305,15 +305,49 @@ dl {
   line-height: 36px;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.white {
+  color: var(--lm-color-light) !important;
+}
+
+.black {
+  color: var(--lm-color-dark) !important;
+}
+
+.primary-color {
+  color: var(--lm-color-first);
+}
+
 .lm-hero-btn {
   border-radius: 0px;
   padding: 12px 30px;
-  color: var(--lm-color-dark);
+  color: var(--lm-color-light);
   background-color: var(--lm-color-neon);
+  border: 1px solid transparent;
   text-align: center;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
   font-weight: 600;
   transition: all ease-in-out 0.4s;
+  border-radius: 4px;
+}
+
+.lm-hero-btn.secondary {
+  color: var(--lm-color-light);
+  background-color: var(--lm-color-dark);
+  border: 1px solid #ccc;
+}
+
+.lm-hero-btn.secondary:hover {
+  color: var(--lm-color-light);
+  background-color: var(--lm-color-dark);
+  border: 1px solid #ccc;
 }
 
 .lm-hero-btn:hover {
@@ -344,12 +378,24 @@ dl {
   color: var(--lm-color-first);
 }
 
+.overlay {
+  position: relative;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
 /*================================================
               Banner Section Start
 =================================================== */
 .lm-banner-sec {
-  height: auto;
-  background-image: url("../images/banner/main-banner.png");
+  height: 500px;
+  background-image: url("../images/banner/main-banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -389,22 +435,29 @@ dl {
   font-family: var(--lm-font);
   margin-bottom: 20px;
   width: 100%;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.lm-banner-sec .banner-content span {
+.lm-banner-sec .banner-content h2 span {
+  color: var(--lm-color-first);
+}
+
+/* .lm-banner-sec .banner-content span {
   color: var(--lm-color-light);
   font-family: var(--lm-font);
   font-size: 25px;
   font-weight: 500;
-}
+} */
 
 /*================================================
               LM Section Two
 =================================================== */
 .lm-sec-two h1 {
-  font-size: 64px;
-  line-height: 70px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 0px;
   max-width: 650px;
   width: 100%;
 }
@@ -429,6 +482,7 @@ dl {
   border: 1px solid var(--lm-color-first);
   padding: 20px 20px;
   border-radius: 5px;
+  background-color: var(--lm-color-dark);
   box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -444,7 +498,7 @@ dl {
 
 .about-widget ul li a {
   text-decoration: none;
-  color: var(--lm-color-second);
+  color: var(--lm-color-light);
   padding: 5px 0px;
   display: block;
   position: relative;
@@ -453,6 +507,7 @@ dl {
 
 .about-widget-inner .thumb img {
   width: 150px;
+  margin-bottom: 15px;
 }
 
 .about-widget ul li a:hover {
@@ -464,7 +519,7 @@ dl {
   width: 10px;
   height: 10px;
   content: "";
-  background: var(--lm-color-second);
+  background: var(--lm-color-light);
   border-radius: 100%;
   left: -25px;
   top: 20px;
@@ -479,19 +534,53 @@ dl {
 }
 
 .lm-sec-three .lm-sec-background {
-  background-image: url("../images/banner/lm-sec-three.png");
+  background-image: url("../images/banner/paragon-plastic-surgery.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 300px;
+  height: auto;
 }
 
 .lm-sec-three .lm-sec-wrapper-top {
   height: auto;
-  background: linear-gradient(90deg, #0056a6 21%, #2c76ce 98%);
-  padding: 50px;
+  background: var(--lm-color-first);
+  padding: 50px 100px;
   transform: translateY(-100px);
-  border-radius: 20px;
+}
+
+.section-content .lm-sec-title {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-weight: 600 !important;
+}
+
+.section-content .short-description {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.lm-sec-three .list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.shape-thumb img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.list li {
+  list-style: none;
+  width: 50%;
+  padding: 7px 0px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--lm-color-first);
 }
 
 .lm-sec-three .lm-sec-wrapper-top .content .lm-sec-title,
@@ -503,345 +592,269 @@ dl {
   padding-right: 30px;
 }
 
-.lm-sec-three .lm-sec-wrapper-top .right-content {
-  padding-left: 40px;
-  border-left: 1px solid #b5b5b5;
+.lm-sec-three .lm-sec-wrapper-top .shadow-thumb {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
-.green-list li {
-  padding: 10px 0px;
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: var(--lm-color-light);
-  font-size: 15px;
-}
-
-.green-list li img {
-  width: 17px;
-  height: 18px;
-}
-
-.lm-sec-three .lm-sec-wrapper-bottom .item {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  height: 90%;
-}
-
-.lm-sec-three .lm-sec-wrapper-bottom .item.one {
-  background-image: url("../images/service/elevated-surveillance.png");
-}
-.lm-sec-three .lm-sec-wrapper-bottom .item.two {
-  background-image: url("../images/service/rapid-deployment.png");
-}
-.lm-sec-three .lm-sec-wrapper-bottom .item.three {
-  background-image: url("../images/service/visual-insights.png");
-}
-.lm-sec-three .lm-sec-wrapper-bottom .item.four {
-  background-image: url("../images/service/trespasser-hardening.png");
-}
-.lm-sec-three .lm-sec-wrapper-bottom .item.five {
-  background-image: url("../images/service/fleetwide-updates.png");
-}
-.lm-sec-three .lm-sec-wrapper-bottom .item.six {
-  background-image: url("../images/service/safety-and-security.png");
-}
-
-.lm-sec-three .lm-sec-wrapper-bottom .item h6,
-.lm-sec-three .lm-sec-wrapper-bottom .item p {
-  color: var(--lm-color-light);
+.lm-sec-three .lm-sec-wrapper-middle .section-heading {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 /*================================================
               LM Section Four
 =================================================== */
-.lm-sec-four {
-  background-color: var(--lm-color-gray);
+.lm-sec-four.lm-sec-padding {
+  padding-top: 0px;
 }
 
-.call-to-action-bar {
-  background-color: #0056a6;
+.lm-sec-four .lm-sec-background {
+  background-image: url("../images/banner/weight-lifting.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+}
+
+.lm-sec-four .item {
+  text-align: center;
+}
+
+.lm-sec-four .item img {
+  width: 100px;
+}
+
+.lm-sec-four .lm-sec-wrapper {
+  height: auto;
+  background: var(--lm-color-light);
+  box-shadow: rgba(0, 0, 0, 0.12) 2px -3px 30px 7px;
+  /* padding: 0px 50px; */
+  transform: translateY(-100px);
   border-radius: 10px;
-  padding: 20px 30px;
 }
 
-.call-to-action-bar .action-bar a {
+.lm-sec-four .lm-sec-wrapper .nav-link,
+.lm-sec-four .lm-sec-wrapper .nav-link:hover {
+  color: var(--lm-color-dark);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.lm-sec-four .lm-sec-wrapper .nav-pills {
+  padding: 15px 25px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0;
+}
+
+.lm-sec-four .lm-sec-wrapper .tab-content .tab-item .thumb {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  right: -450px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lm-sec-four .lm-sec-wrapper .tab-content .tab-item .thumb:after {
+  position: absolute;
+  content: "";
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  border-radius: 2px;
+  height: 10px;
+  background: var(--lm-color-first);
+  z-index: -1;
+}
+
+.lm-sec-four .lm-sec-wrapper .tab-content .tab-item .thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.lm-sec-four .lm-sec-wrapper .tab-content {
+  padding: 30px 80px 30px 50px;
+}
+
+.lm-sec-four .lm-sec-wrapper .nav-pills .nav-link.active,
+.lm-sec-four .lm-sec-wrapper .nav-pills .show > .nav-link {
+  background-color: var(--lm-color-first);
   color: var(--lm-color-light);
-  font-weight: 600;
-}
-
-.lm-sec-four .list {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.lm-sec-four .list li {
-  list-style: none;
-  width: 50%;
-  padding: 7px 0px;
-  font-weight: 600;
 }
 
 /*================================================
               LM Section Five
 =================================================== */
-.lm-sec-five .section-content {
-  max-width: 950px;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
+.lm-sec-inner-top {
+  background-color: #dbdbdb;
 }
 
-.lm-sec-five .section-content h2 {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.lm-sec-five .lm-sec-five-container {
+.lm-sec-inner-bottom {
+  background-color: var(--lm-color-light);
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
-.lm-sec-five .swiper-horizontal > .swiper-scrollbar,
-.swiper-scrollbar.swiper-scrollbar-horizontal {
-  display: none;
-}
-
-.lm-sec-five .swiper-pagination-bullet-active {
-  background-color: var(--lm-color-first);
-}
-
-.lm-sec-five .swiper-slide .thumbnail {
-  transform: scale(0.85);
-  transition: all 0.7s linear;
-}
-
-.lm-sec-five .slide-content {
-  display: none;
-}
-.lm-sec-five .slide-content.active {
-  display: block;
-}
-
-.lm-sec-five .slide-content {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.lm-sec-five .swiper-slide.swiper-slide-active .thumbnail {
-  transform: scale(1.05);
-}
-
-.lm-sec-five .slider-button-prev,
-.lm-sec-five .slider-button-next {
+.rotate-shape {
   position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 9;
-  transform: translateY(-50%);
+  content: "";
+  width: 2000px;
+  height: 100px;
+  background: #dbdbdb;
+  top: 0;
+  left: -150px;
+  z-index: -1;
+  transform: rotate(177deg) translateY(45px);
 }
 
-.lm-sec-five .slider-button-prev img,
-.lm-sec-five .slider-button-next img {
-  width: 40px;
+.lm-sec-inner-bottom .thumbnail {
+  box-shadow: rgba(0, 0, 0, 0.12) 2px 0px 20px 2px;
 }
 
-.lm-sec-five .slider-button-next {
-  left: auto;
-  right: 0;
-  transform: translateY(-50%) rotate(180deg);
+.lm-sec-five .section-heading {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 /*================================================
               LM Section Six
 =================================================== */
 .lm-sec-six .lm-sec-background {
-  background-image: url("../images/banner/lm-sec-six.png");
+  background-image: url("../images/banner/face-lifts.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: auto;
 }
 
-.lm-sec-six .lm-sec-wrapper-top {
-  height: auto;
-  background-image: url("../images/service/secure-construction.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 30px;
-  transform: translateY(-100px);
-  border-radius: 20px;
-}
-
-.lm-sec-six .lm-sec-wrapper-top .content {
-  height: auto;
-  background-image: url("../images/service/pattern.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 30px;
-  border-radius: 12px;
-}
-
-.lm-sec-six .action-logo-btn {
-  background: var(--lm-color-light);
-  padding: 6px;
-  border-radius: 30px;
-  max-width: 300px;
-  width: 100%;
-  padding-right: 10px;
-  margin-bottom: 10px;
-}
-
-/*================================================
-              LM Section Seven
-=================================================== */
-.lm-sec-seven {
-  background-color: var(--lm-color-gray);
-}
-.lm-sec-seven .lm-sec-background {
-  background-image: url("../images/banner/lm-sec-seven.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: auto;
-}
-
-.lm-sec-seven .lm-sec-wrapper-top {
-  transform: translateY(-100px);
-}
-
-.lm-sec-seven .lm-sec-wrapper-top .item {
-  border-radius: 12px;
-}
-
-.lm-sec-seven .lm-sec-wrapper-top .item .content {
-  padding: 25px 15px 15px;
-  background-color: var(--lm-color-light);
-  min-height: 170px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.lm-sec-seven .lm-sec-wrapper-top .item .thumb img {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.lm-sec-seven .lm-sec-wrapper-top .item .content h6 {
-  margin-bottom: 0px;
-  font-size: 17px;
-  color: var(--lm-color-first);
-}
-
-.lm-sec-seven .lm-sec-wrapper-top .item .content p {
-  line-height: 23px;
-  font-size: 15px;
-}
-
-.lm-sec-seven .lm-sec-wrapper-top .item .content .round-shape-number {
-  position: absolute;
-  top: -20px;
-  left: 12%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: var(--lm-color-first);
-  border-radius: 100%;
-  background-color: var(--lm-color-light);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-  font-weight: 600;
-}
-
-.lm-sec-seven .lm-banner-content h2,
-.lm-sec-seven .lm-banner-content p {
-  color: var(--lm-color-light);
-  text-align: center;
-}
-
-.lm-sec-seven .lm-banner-content {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.lm-sec-seven .action-logo-btn {
-  background: var(--lm-color-light);
-  padding: 6px;
-  border-radius: 30px;
-  max-width: 300px;
-  width: 100%;
-  padding-right: 10px;
-  margin-bottom: 10px;
-}
-
-.lm-sec-seven .lm-sec-wrapper-bottom .left-content {
-  background: linear-gradient(90deg, #0056a6 21%, #2c76ce 98%);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.lm-sec-seven .lm-sec-wrapper-bottom .right-content .lm-sec-title {
-  font-size: 40px;
-  line-height: 52px;
-}
-
-/*================================================
-              LM Section Eight
-=================================================== */
-.lm-sec-eight {
-  background-image: url("../images/banner/lm-sec-eight.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 1000px;
-}
-
-.lm-sec-eight .accordion-wrapper .accordion-item {
-  margin-bottom: 0px;
+.accordion-wrapper .accordion-item {
   border: none;
+  margin-bottom: 20px;
+  background-color: transparent;
 }
 
-.lm-sec-eight .accordion-wrapper .accordion-button {
+.accordion-wrapper .accordion-button {
   color: var(--lm-color-dark);
   font-size: 16px;
   line-height: 27px;
   font-weight: 600;
   padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+  background-color: var(--lm-color-first);
+  color: var(--lm-color-light);
 }
 
-.lm-sec-eight .accordion-wrapper .accordion-header {
+.accordion-wrapper .accordion-collapse {
+  background-color: transparent;
+}
+
+.accordion-wrapper .accordion-header {
   padding-bottom: 0px;
   border-bottom: none;
 }
 
-.lm-sec-eight .accordion-wrapper .accordion-button.collapsed,
-.lm-sec-eight .accordion-wrapper .accordion-button:focus,
-.lm-sec-eight .accordion-wrapper .accordion-button:not(.collapsed) {
+.accordion-wrapper .accordion-button.collapsed,
+.accordion-wrapper .accordion-button:focus,
+.accordion-wrapper .accordion-button:not(.collapsed) {
   box-shadow: none;
 }
 
-.lm-sec-eight .accordion-wrapper .accordion-button:not(.collapsed)::after,
-.lm-sec-eight .accordion-wrapper .accordion-button:after {
+/* .accordion-wrapper .accordion-button:not(.collapsed)::after,
+.accordion-wrapper .accordion-button:after {
   background-image: none;
+} */
+
+.accordion-wrapper .accordion-button::after {
+  width: 12px;
+  height: 18px;
+  background-size: 10px;
+  background-image: url("../images/icon/right-arrow.png");
+  transition: all 0.5s;
+  display: flex;
+  position: absolute;
+  top: 53%;
+  right: 2%;
+  transform: translateY(-50%);
+}
+.accordion-wrapper .accordion-button:not(.collapsed)::after {
+  background-image: url("../images/icon/right-arrow.png");
+  transform: translateY(-50%) rotate(90deg);
+  right: 2.5%;
 }
 
-.lm-sec-eight .accordion-wrapper .accordion-body {
+.accordion-wrapper .accordion-body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 11px;
-  margin-bottom: 10px;
+  background-color: transparent;
+  padding: 5px 0px;
+}
+
+.accordion-wrapper .accordion-body p {
+  color: var(--lm-color-light);
+  line-height: 22px;
+}
+
+/*================================================
+              LM Section Seven
+=================================================== */
+
+.lm-sec-seven .item .content {
+  max-width: 92%;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.12) 2px 0px 20px 2px;
+  transform: translateY(-68px);
+}
+
+.lm-sec-seven .item .content h6 {
+  padding: 10px 12px;
+  text-align: center;
+  background-color: var(--lm-color-first);
+  color: var(--lm-color-light);
+  margin: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  min-height: 68px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lm-sec-seven .item .content p {
+  padding: 25px;
+  text-align: center;
+  color: var(--lm-color-dark);
+  background-color: var(--lm-color-light);
+  margin: 0px;
+  line-height: 23px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-height: 440px;
+}
+
+/*================================================
+              LM Section Eight
+=================================================== */
+.lm-sec-eight .lm-sec-background {
+  background-image: url("../images/banner/hair-growth.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+}
+
+.lm-form {
+  background-color: var(--lm-color-light);
+  border-radius: 5px;
 }
 
 /*================================================
@@ -991,6 +1004,31 @@ dl {
     font-size: 55px;
     line-height: 62px;
   }
+
+  .lm-sec-seven .item .content p {
+    min-height: 535px;
+  }
+
+  .rotate-shape {
+    display: none;
+    position: static;
+    width: 0;
+    height: 0;
+    left: 0;
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  .lm-sec-four .lm-sec-wrapper .tab-content .tab-item .thumb {
+    position: static;
+    height: auto;
+    width: auto;
+    transform: translateY(0px);
+    margin-bottom: 15px;
+  }
+
+  .lm-sec-four .lm-sec-wrapper .tab-content .tab-item .thumb:after {
+    position: static;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1001,6 +1039,29 @@ dl {
   }
   .lm-sec-title.secondary {
     max-width: 100%;
+  }
+  .lm-sec-seven .item {
+    margin-bottom: 30px;
+  }
+  .lm-sec-seven .item .content {
+    transform: translateY(0px);
+    max-width: 100%;
+  }
+  .lm-sec-seven .item .content h6,
+  .lm-sec-seven .item .content p {
+    min-height: auto;
+  }
+
+  .lm-sec-seven .item .content h6 {
+    border-radius: 0;
+  }
+
+  .lm-sec-four .lm-sec-wrapper .tab-content {
+    padding: 15px;
+  }
+
+  .lm-sec-seven .item {
+    margin-bottom: 20px;
   }
 
   .lm-sec-title.three {
@@ -1044,10 +1105,10 @@ dl {
     margin-bottom: 10px;
   }
 
-  .lm-banner-sec .banner-content span {
+  /* .lm-banner-sec .banner-content span {
     font-size: 20px;
     margin-bottom: 10px;
-  }
+  } */
 
   .lm-sec-two h1 {
     font-size: 40px;
@@ -1069,10 +1130,6 @@ dl {
 
   .lm-sec-three.lm-sec-padding {
     padding-top: 0px;
-  }
-  .lm-sec-three .lm-sec-background {
-    background-image: none;
-    height: 0px;
   }
 
   .lm-sec-three .work-wrapper {
@@ -1099,6 +1156,11 @@ dl {
   }
 
   .lm-sec-three .lm-sec-wrapper-top {
+    padding: 20px 15px;
+    transform: translateY(0px);
+  }
+
+  .lm-sec-four .lm-sec-wrapper {
     padding: 20px 15px;
     transform: translateY(0px);
   }
@@ -1158,6 +1220,26 @@ dl {
     line-height: 30px;
   }
 
+  .accordion-wrapper .accordion-item {
+    margin-bottom: 10px;
+  }
+
+  .accordion-wrapper .accordion-body p {
+    padding: 0px 0px;
+  }
+
+  .banner-form {
+    width: 100%;
+  }
+
+  .lm-sec-four .lm-sec-wrapper {
+    padding: 0px;
+  }
+
+  .shape-thumb img {
+    width: 150px;
+  }
+
   .lm-sec-title.three {
     font-size: 20px;
     line-height: 26px;
@@ -1185,12 +1267,14 @@ dl {
     font-size: 24px;
     line-height: 30px;
   }
-  .lm-banner-sec .banner-content span {
+  /* .lm-banner-sec .banner-content span {
     font-size: 18px;
-  }
+  } */
 
   .lm-hero-btn {
-    padding: 8px 30px;
+    padding: 7px 25px;
+    width: 100%;
+    font-size: 14px;
   }
 
   .lm-sec-two h1 {
@@ -1200,6 +1284,10 @@ dl {
 
   .about-list li {
     font-size: 15px;
+  }
+
+  .list li {
+    width: 100%;
   }
 
   .lm-sec-four .list li {

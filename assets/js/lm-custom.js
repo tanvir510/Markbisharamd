@@ -4,54 +4,34 @@
   /*****************************
    * Banner Swiper
    *****************************/
-  var mySwiper = new Swiper(".lm-sec-five-container", {
-    spaceBetween: 1,
-    slidesPerView: 3,
-    centeredSlides: true,
-    roundLengths: true,
-    loop: true,
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all accordion buttons
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+    const images = document.querySelectorAll(".accordion-image");
 
-    navigation: {
-      nextEl: ".slider-button-next",
-      prevEl: ".slider-button-prev",
-    },
-
-    // Listen to the slide transition end event
-    on: {
-      init: function () {
-        updateSlideContent(); // Initial content update
-      },
-      slideChangeTransitionEnd: function () {
-        updateSlideContent(); // Update content when the slide transition is complete
-      },
-    },
-  });
-
-  // Function to update content based on the active slide
-  function updateSlideContent() {
-    // Find the active slide based on the '.swiper-slide-active' class
-    const activeSlide = document.querySelector(".swiper-slide-active");
-
-    // Ensure activeSlide exists before proceeding
-    if (activeSlide) {
-      const contentId = Number(activeSlide.getAttribute("data-content-id")) + 1;
-
-      console.log("Active Slide Content ID:", contentId);
-
-      // Hide all content divs
-      document.querySelectorAll(".slide-content").forEach(function (contentDiv) {
-        contentDiv.classList.remove("active");
+    // Function to show image corresponding to accordion item
+    const showImage = (index) => {
+      images.forEach((image, i) => {
+        if (i === index) {
+          image.classList.add("show");
+          image.classList.remove("hide");
+        } else {
+          image.classList.add("hide");
+          image.classList.remove("show");
+        }
       });
+    };
 
-      // Show the corresponding content div for the active slide
-      const activeContent = document.getElementById("content-" + contentId);
-      if (activeContent) {
-        activeContent.classList.add("active");
-      }
-    } else {
-      console.error("Active slide not found!");
-    }
-  }
+    // Add event listener to each accordion button
+    accordionButtons.forEach((button, index) => {
+      button.addEventListener("click", function () {
+        showImage(index);
+      });
+    });
+
+    // Show first image initially
+    showImage(0);
+  });
 
   /*****************************
    * Scroll Bottom to Top
