@@ -13,11 +13,11 @@
     const showImage = (index) => {
       images.forEach((image, i) => {
         if (i === index) {
-          image.classList.add("show");
-          image.classList.remove("hide");
+          image.classList.add("shows");
+          image.classList.remove("hides");
         } else {
-          image.classList.add("hide");
-          image.classList.remove("show");
+          image.classList.add("hides");
+          image.classList.remove("shows");
         }
       });
     };

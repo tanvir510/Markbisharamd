@@ -305,11 +305,11 @@ dl {
   line-height: 36px;
 }
 
-.hide {
+.hides {
   display: none;
 }
 
-.show {
+.shows {
   display: block;
 }
 
@@ -937,7 +937,7 @@ dl {
 
 .service-widget .widget-top .selection select {
   border-radius: 8px;
-  background-color: #bddaec;
+  background-color: var(--lm-color-light);
   border: none;
   outline: none;
   padding: 7px 15px;
