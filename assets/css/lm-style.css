@@ -346,13 +346,14 @@ dl {
 
 .lm-hero-btn.secondary:hover {
   color: var(--lm-color-light);
+  opacity: 0.9;
   background-color: var(--lm-color-dark);
   border: 1px solid #ccc;
 }
 
 .lm-hero-btn:hover {
-  color: var(--lm-color-dark);
-  opacity: 0.8;
+  color: var(--lm-color-light);
+  opacity: 0.7;
 }
 
 .lm-hero-btn-two {
@@ -435,7 +436,8 @@ dl {
   font-family: var(--lm-font);
   margin-bottom: 20px;
   width: 100%;
-  line-height: 45px;
+  line-height: 50px;
+  font-size: 44px;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -506,7 +508,7 @@ dl {
 }
 
 .about-widget-inner .thumb img {
-  width: 150px;
+  width: 220px;
   margin-bottom: 15px;
 }
 
@@ -739,7 +741,7 @@ dl {
 
 .accordion-wrapper .accordion-item {
   border: none;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-color: transparent;
 }
 
