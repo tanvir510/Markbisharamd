@@ -395,7 +395,7 @@ dl {
               Banner Section Start
 =================================================== */
 .lm-banner-sec {
-  height: 500px;
+  height: 650px;
   background-image: url("../images/banner/main-banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -424,7 +424,7 @@ dl {
 
 .lm-banner-sec .banner-content {
   width: 100%;
-  max-width: 720px;
+  max-width: 850px;
 }
 
 .lm-banner-sec .banner-content .register-button {
@@ -508,8 +508,9 @@ dl {
 }
 
 .about-widget-inner .thumb img {
-  width: 220px;
-  margin-bottom: 15px;
+  width: 230px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .about-widget ul li a:hover {
