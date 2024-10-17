@@ -485,7 +485,7 @@ dl {
   padding: 20px 20px;
   border-radius: 5px;
   background-color: var(--lm-color-dark);
-  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.42);
 }
 
 .about-widget ul {
@@ -636,7 +636,7 @@ dl {
 .lm-sec-four .lm-sec-wrapper {
   height: auto;
   background: var(--lm-color-light);
-  box-shadow: rgba(0, 0, 0, 0.12) 2px -3px 30px 7px;
+  box-shadow: rgba(0, 0, 0, 0.42) 2px -3px 30px 7px;
   /* padding: 0px 50px; */
   transform: translateY(-100px);
   border-radius: 10px;
@@ -719,7 +719,7 @@ dl {
 }
 
 .lm-sec-inner-bottom .thumbnail {
-  box-shadow: rgba(0, 0, 0, 0.12) 2px 0px 20px 2px;
+  box-shadow: rgba(0, 0, 0, 0.42) 2px 0px 20px 2px;
 }
 
 .lm-sec-five .section-heading {
@@ -813,7 +813,7 @@ dl {
   max-width: 92%;
   width: 100%;
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.12) 2px 0px 20px 2px;
+  box-shadow: rgba(0, 0, 0, 0.42) 2px 0px 20px 2px;
   transform: translateY(-68px);
 }
 
@@ -916,7 +916,7 @@ dl {
               LM Section Thirteen
 =================================================== */
 .service-widget {
-  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.42);
   border: 1px solid var(--lm-color-first);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
